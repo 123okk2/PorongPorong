@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+h1 {
+                font-family: 'Cute Font', cursive;
+                text-align: center;
+                margin-top: 230px;
+                font-size: 130px;
+                font-weight: bolder;
+                letter-spacing: 15px;
+                margin-bottom: 5px;
+}
+a {
+              color: black;
+              text-decoration: none;
+            }
+
+            body {
+              background: url(포롱포롱2.png) no-repeat center top;
+            }
+
+            .button {
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border: none;
+                font-size: 35px;
+                font-family: 'Cute Font', cursive;
+                font-weight: bold;
+                cursor: pointer;
+                transition-duration: 1.0s;
+                padding-top: 0px;
+                padding-bottom: 40px;
+                border-radius: 25px;
+            }
+
+            .blank {
+                background-color: white;
+                color: black;
+                border: 2px solid rgb(59, 181, 232);
+                border-right: 6px solid rgb(59, 181, 232);
+                border-bottom: 6px solid rgb(59, 181, 232);
+                margin-right: 100px;
+            }
+
+            .blank:hover {
+                background-color: rgb(59, 181, 232);
+                color: white;
+                font-weight: bolder;
+            }
+
+            .sentence {
+                background-color: white;
+                color: black;
+                border: 2px solid rgb(59, 181, 232);
+                border-right: 6px solid rgb(59, 181, 232);
+                border-bottom: 6px solid rgb(59, 181, 232);
+                margin-left: 100px;
+            }
+
+            .sentence:hover {
+                background-color: rgb(59, 181, 232);
+                color: white;
+                font-weight: bolder;
+            }
+
+            div {
+                margin-left: 100px;
+                margin-right: 100px;
+                margin-top: 60px;
+            }
+
+            #menu {
+                margin-top: 20px;
+                text-align: center;
+            }

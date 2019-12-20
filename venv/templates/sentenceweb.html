@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="icon" href="porong2.png">
+        <title>문장 완성하기</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Cute+Font&amp;subset=korean" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static', filename='sentence.css') }}">
+        <script>
+            function allowDrop(ev) {
+              ev.preventDefault();
+            }
+
+            function drag(ev) {
+              ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+              ev.preventDefault();
+              var data=ev.dataTransfer.getData("text");
+              ev.target.appendChild(document.getElementById(data));
+            }
+
+            function CustomAlert(){
+                this.render = function(msg,collect){
+                    var winW = window.innerWidth;
+                    var winH = window.innerHeight;
+                    var dialogoverlay = document.getElementById('dialogoverlay');
+                    var dialogbox = document.getElementById('dialogbox');
+                    dialogoverlay.style.display = "block";
+                    dialogoverlay.style.height = winH+"px";
+                    dialogbox.style.left = (winW/2) - (550 * .5)+"px";
+                    dialogbox.style.top = "200px";
+                    dialogbox.style.display = "block";
+                    document.getElementById('dialogboxhead').innerHTML = "";
+                    document.getElementById('dialogboxbody').innerHTML = msg;
+                    if(collect=='정답'){
+                        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok();location.reload();">OK</button>';
+                    }
+                    else {
+                        document.getElementById('dialogboxfoot').innerHTML = '<button onclick="Alert.ok();">OK</button>';
+                    }
+                }
+                this.ok = function(){
+                    document.getElementById('dialogbox').style.display = "none";
+                    document.getElementById('dialogoverlay').style.display = "none";
+                }
+            }
+            var Alert = new CustomAlert();
+
+            function check(){
+                var input = box.innerText;
+
+                if (input == "{{w_answer}}" )
+                {
+                    Alert.render('정답입니다','정답');
+
+                }
+                else
+                    Alert.render('틀렸습니다','틀림');
+            }
+        </script>
+
+    </head>
+    <body>
+        <div id="dialogoverlay"></div> <!---알림창 부분--->
+          <div id="dialogbox">
+            <div>
+              <div id="dialogboxhead"></div>
+              <div id="dialogboxbody"></div>
+              <div id="dialogboxfoot"></div>
+            </div>
+          </div>
+
+        <div id="main">
+            <div><h2><a href="/" style="color: rgb(0, 170, 255)">포롱포롱</a></h2></div>
+            <div><h1><a href="sentence" style="color: rgb(0, 170, 255)">문장 완성하기</a></h1></div>
+        </div>
+
+        <div id="answer">
+            <h3>정답</h3>
+            <div id="sentence">
+
+                <div id="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                <button type="button" id="collect_botton" onclick="check()">확인</button>
+            </div>
+        </div>
+
+        <div id="sample">
+            <h3>보기</h3>
+            <div id = "example">
+
+                {%for n in w_shuffle%}
+                <div id="box_ex" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div id={{n}} draggable="true" ondragstart="drag(event)" style="display: inline; margin: 15px; font-size: 40px;">{{n}}</div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </body>
+</html>

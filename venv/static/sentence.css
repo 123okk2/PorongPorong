@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+            h1 {
+                font-family: 'Cute Font', cursive;
+                text-align: left;
+                font-size: 85px;
+                font-weight: bolder;
+                letter-spacing: 10px;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                margin-left: 60px;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            h3 {
+                font-family: 'Cute Font', cursive;
+                text-align: center;
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            body {
+              background: url("포롱포롱2.png") no-repeat left top;
+              background-size: 50px 120px;
+              background-position: 3% 0%;
+            }
+
+            #main {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            }
+
+            h2 {
+                font-family: 'Cute Font', cursive;
+                font-size: 50px;
+                font-weight: bolder;
+                margin-top: 10px;
+                letter-spacing: 10px;
+                margin-left: 100px;
+            }
+
+            #answer {
+                color: blue;
+                border-width: 5px;
+                border-right: 10px;
+                border-bottom: 10px;
+                border-style: solid;
+                margin: 20px;
+                border-color: rgb(0, 170, 255);
+                height: 200px;
+                border-radius: 25px;
+            }
+
+            #sample {
+                border-width: 5px;
+                border-right: 10px;
+                border-bottom: 10px;
+                border-style: solid;
+                border-color: rgb(127, 127, 127);
+                margin: 20px;
+                height: 300px;
+                border-radius: 25px;
+                text-align: center;
+            }
+
+            #sentence {
+                vertical-align: middle;
+                font-family: 'Cute Font', cursive;
+                font-size: 60px;
+                font-weight: bolder;
+                text-align: center;
+            }
+
+            #box {
+                display: inline-block;
+                vertical-align: middle;
+                border: 5px solid black;
+                border-color: rgb(0, 170, 255);
+                width: 1000px;
+                height: 70px;
+                padding-bottom: 10px;
+            }
+            #box_ex{
+                font-family: 'Cute Font', cursive;
+                font-size: 40px;
+                font-weight: bolder;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 20px;
+                margin-left: 20px;
+                width: 15%;
+                height: 60px;
+                border: 5px solid rgb(127, 127, 127);
+            }
+
+            #example {
+                margin-top: 60px;
+                text-align: center;
+
+            }
+
+        #dialogoverlay{
+           display: none;
+           opacity: .8;
+           position: fixed;
+           top: 0px;
+           left: 0px;
+           background: #FFF;
+           width: 100%;
+           z-index: 10;
+        }
+        #dialogbox{
+           display: none;
+           position: fixed;
+           background: #88d4ff;
+           border-radius:7px;
+           width:550px;
+           z-index: 10;
+        }
+        #dialogbox > div{ background:#FFF; margin:8px; }
+        #dialogbox > div > #dialogboxhead{ background: #ffffff; font-size:19px; padding:10px; color:#CCC; }
+        #dialogbox > div > #dialogboxbody{ background:#88d4ff; padding:20px; color:#FFF; font-size:40px;}
+        #dialogbox > div > #dialogboxfoot{ background: #ffffff; padding:10px; text-align:right; }
+
+        #collect_botton {
+             font-size: 30px;
+             font-family: 'Cute Font', cursive;
+             color: #fff;
+             background: rgb(0, 170, 255);
+             border-radius:0.5em;
+             padding:5px 20px;
+             border: none;
+        }
