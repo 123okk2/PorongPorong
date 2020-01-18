@@ -25,5 +25,5 @@
 * 전우성 : 프론트 엔드
 
 ## References
-# 마르코브 체인은 해당 도서의 코드를 인용하여 작성했다.
-# https://wikibook.co.kr/python-machine-learning/
+* 마르코브 체인은 해당 도서의 코드를 인용하여 작성했다.
+* https://wikibook.co.kr/python-machine-learning/
