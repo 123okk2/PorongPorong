@@ -19,7 +19,11 @@
 ![1_00001](https://user-images.githubusercontent.com/51351974/71305663-b012e780-241a-11ea-8821-7ae333d33d2a.jpg)
 
 ## Made By
-* 이민우 : 마르코브 체인 제작 및 백엔드
+* 이민우 : 백엔드 및 마르코브 체인 수정
 * 류기혁 : 백엔드 및 알고리즘 재구성
 * 송성근 : 프론트 엔
 * 전우성 : 프론트 엔드
+
+## References
+# 마르코브 체인은 해당 도서의 코드를 인용하여 작성했다.
+# https://wikibook.co.kr/python-machine-learning/
